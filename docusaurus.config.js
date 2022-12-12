@@ -12,7 +12,7 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon.svg",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -59,10 +59,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Documentation",
+        title: "Home",
         logo: {
           alt: "EMnify Logo",
-          src: "img/logo.svg",
+          src: "img/Logo-web_logo-white-onblue.svg",
         },
         items: [
           {
@@ -71,7 +71,7 @@ const config = {
             position: "left",
             label: "Cellular IoT",
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          { to: "/blog", label: "Change Log", position: "left" },
           {
             href: "https://github.com/facebook/docusaurus",
             label: "GitHub",
