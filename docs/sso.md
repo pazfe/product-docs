@@ -4,18 +4,18 @@ sidebar_position: 9
 
 # Single Sign-On
 
-With Single Sign-On (SSO) enabled, your organization can access the EMnify portal using Microsoft Business or Google Cloud Platform account credentials.
+With Single Sign-On (SSO) enabled, your organization can access the emnify Portal using Microsoft Business or Google Cloud Platform account credentials.
 
 ## Setup SSO with Microsoft Active Directory
 
 **Prerequisites:**
 
 - An Azure Subscription with an Active Directory license
-- An account in the EMnify portal using the same email address as the one used to sign in to Microsoft Azure
+- An account in the emnify Portal using the same email address as the one used to sign in to Microsoft Azure
 
 :::caution
-If your email address used in the EMnify portal differs from the one used to log in to Azure, this setup won't work.
-Instead, add an additional user to the EMnify portal with **Administrator** privileges.
+If your email address used in the emnify Portal differs from the one used to log in to Azure, this setup won't work.
+Instead, add an additional user to the emnify Portal with **Administrator** privileges.
 :::
 
 ### SSO with Microsoft
@@ -26,9 +26,9 @@ Log in to Azure and navigate to **Azure Active Directoring** in the left sidebar
 At the top of the page, click **+ Add** and then **App Registration**.
 ![under add, click on app registration](./assets/sso_app_registration_s2.png)
 
-- Give it a **Name** (e.g., "EMnify")
+- Give it a **Name** (e.g., "emnify")
 - The **Supported Account Types** should be `Multitenant`.
-This requests a consent screen on IDP verification in the portal later. 
+This requests a consent screen on IDP verification in the Portal later. 
 - Set the Redirect URI to type `Web` with the value: `https://prod-e5.okta.com/oauth2/v1/authorize/callback`
 ![Configure app registration details](./assets/sso_app_registration_details_s3.png)
     
@@ -57,13 +57,13 @@ This value won't be shown again.
 Choose an expiration date and mark your calendar to generate and configure a new secret before it expires.
 ![copy security certificate value](./assets/sso_new_client_s11.png)
 
-Navigate to **Overview** in the sidebar and copy the **Application (client) ID** to use later in the EMnify portal.
+Navigate to **Overview** in the sidebar and copy the **Application (client) ID** to use later in the emnify Portal.
 ![copy application id](./assets/sso_copy_application_id_s12.png)
 
-#### Configure the EMnify Portal
+### Configure the emnify Portal
 
-Login to your EMnify account, go to organization settings in the topbar, and click on **Single Sign-On**.
-![EMnify portal sso settings](./assets/sso_org_settings_s13.png)
+Login to your emnify account, go to organization settings in the topbar, and click on **Single Sign-On**.
+![emnify Portal sso settings](./assets/sso_org_settings_s13.png)
 
 If you do not already have SSO enabled for your account, contact support and request that it be enabled.
 ![get support to enable sso for your account](./assets/sso_get_support_s14.png)
@@ -85,6 +85,6 @@ In the unlikely event that the provider could not be configured on the very firs
 
 - If the user receives a "User cancelled social login", check if the application registration is set to Multi-tenant.
 - Is the user part of the Azure Tenant?
-- Is the user part of the EMnify enterprise?
+- Is the user part of the emnify enterprise?
 - Is the user enabled?
 - Try again using incognito tab.
