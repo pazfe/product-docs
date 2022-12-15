@@ -62,29 +62,35 @@ Navigate to **Overview** in the sidebar and copy the **Application (client) I
 
 ### Configure the emnify Portal
 
-Login to your emnify account, go to organization settings in the topbar, and click on **Single Sign-On**.
+Log in to your emnify account, go to Organization Settings (building icon) in the top-level navigation, and click **Single Sign-On**.
 ![emnify Portal sso settings](./assets/sso_org_settings_s13.png)
 
-If you do not already have SSO enabled for your account, contact support and request that it be enabled.
+If you need SSO enabled for your account, contact support.
 ![get support to enable sso for your account](./assets/sso_get_support_s14.png)
 
-Otherwise, click on **Add** under the Microsoft SSO provider.
+Otherwise, click **Add** under the Microsoft SSO provider.
 ![add microsoft sso](./assets/sso_add_s15.png)
 
-Fill in the ``Application (client) ID and the `Secret Value`` that you copied earlier, then click **Create and Activate**.
+Fill in the **Client ID** and **Client Secret** with the values you copied earlier, then click **Create and Activate**.
 ![create and activate](./assets/sso_create_activate_s16.png)
 
 The final step is to verify the provider.
-SSO will not be configured until you complete this step.
+You must complete this step to configure SSO.
 Click on **Verify Integration** and follow the prompts.
 ![verify the sso provider](./assets/sso_verify_s17.png)
 
-#### Troubleshooting
+## Troubleshooting
 
-In the unlikely event that the provider could not be configured on the very first attempt, check the following:
+If you encounter any issues while setting up SSO, use the following suggestions to help troubleshoot.
 
-- If the user receives a "User cancelled social login", check if the application registration is set to Multi-tenant.
-- Is the user part of the Azure Tenant?
-- Is the user part of the emnify enterprise?
-- Is the user enabled?
-- Try again using incognito tab.
+**Microsoft Active Directory**
+
+- Are you part of the Azure Tenant?
+- Do you see a `User canceled social login` message? Make sure the application registration is set to **Multitenant**.
+
+**General**
+
+- Are you part of the emnify enterprise?
+- Is your user account enabled on emnify?
+
+If everything looks correct and you still have issues, try again using an incognito tab.
