@@ -4,9 +4,9 @@ sidebar_position: 9
 
 # Single Sign-On
 
-With Single Sign-On (SSO) enabled, members of your organization with access to the EMnify portal will be able to log in using their Microsoft Business account credentials.
+With Single Sign-On (SSO) enabled, your organization can access the EMnify portal using Microsoft Business or Google Cloud Platform account credentials.
 
-### Setup SSO with Microsoft Active Directory
+## Setup SSO with Microsoft Active Directory
 
 **Prerequisites:**
 
@@ -14,51 +14,50 @@ With Single Sign-On (SSO) enabled, members of your organization with access to t
 - An account in the EMnify portal using the same email address as the one used to sign in to Microsoft Azure
 
 :::caution
-If your email address used in the EMnify portal is not the same as the one used to login to Azure, this setup will not work.
-Instead, add an additional user to the EMnify portal with `Administrator` privileges.
+If your email address used in the EMnify portal differs from the one used to log in to Azure, this setup won't work.
+Instead, add an additional user to the EMnify portal with **Administrator** privileges.
 :::
 
-#### SSO with Microsoft
+### SSO with Microsoft
 
-Log into Azure and navigate to Azure Active Directoring in the left sidebar.
+Log in to Azure and navigate to **Azure Active Directoring** in the left sidebar.
 ![Navigate to Azure Active Directory](./assets/sso_azure_active_directory.png)
 
-At the top of the page, click on `+ Add` and then `App Registration`.
+At the top of the page, click **+ Add** and then **App Registration**.
 ![under add, click on app registration](./assets/sso_app_registration_s2.png)
 
-- Give it a **name** (i.e. `EMnify`)
-- The **Supported Account Types** should be **Multi Tenant**.
-This will request for a consent screen on IDP verification in the portal later.
-    
-- Set the Redirect URI to type `Web` with the value: `[https://prod-e5.okta.com/oauth2/v1/authorize/callback](https://prod-e5.okta.com/oauth2/v1/authorize/callback)`
+- Give it a **Name** (e.g., "EMnify")
+- The **Supported Account Types** should be `Multitenant`.
+This requests a consent screen on IDP verification in the portal later. 
+- Set the Redirect URI to type `Web` with the value: `https://prod-e5.okta.com/oauth2/v1/authorize/callback`
 ![Configure app registration details](./assets/sso_app_registration_details_s3.png)
     
 
-Navigate to **Authentication** in the left sidebar, and in the section **Implicit grand and hybrid flows** enable `Access Tokens` and `ID Tokens`.
+Navigate to **Authentication** in the left sidebar, and in the section **Implicit grand and hybrid flows**, enable `Access tokens` and `ID tokens`.
 ![SSO authentication settings](./assets/sso_authentication_settings_s4.png)
 
-Go to **Token configuration** in the left sidebar, click on **Add optional claim** and under **SAML** enable to `upn` claim.
-Leave the option **Turn on the Microsoft Graph profile** permission unchecked.
+Go to **Token configuration** in the left sidebar, click **Add optional claim**, and under **SAML**, enable the `upn` claim.
+Leave the option `Turn on the Microsoft Graph profile` permission unchecked.
 ![SSO token configuration](./assets/sso_token_configuration_s5.png)
 
-Head to **API permissions** in the left sidebar, click on the existing permission entry **Microsoft Graph (1)** and check the `email` and `profile` OpenID permissions.
+Head to **API permissions** in the left sidebar, click the existing permission entry **Microsoft Graph (1)** and check the `email` and `profile` OpenID permissions.
 ![set api permissions](./assets/sso_api_permissions_s6.png)
 
 Your configuration should look like this:
 ![api permission configuration](./assets/sso_api_permissions_s7.png)
 
-In the left sidebar, go to **Expose an API** and click on `Set` and then click on `save`.
+In the left sidebar, go to **Expose an API**, click **Set**, and then click on **Save**.
 ![set expose an api](./assets/sso_expose_api_s8.png)
 
-After navigating to **Certificates & Secrets** in the left sidebar, click on `New client secret`.
+After navigating to **Certificates & Secrets** in the left sidebar, click **New client secret**.
 ![new client secret](./assets/sso_new_client_s10.png)
 
 Copy the **Value** and save it to a secure location.
-This value will not be shown again in the portal.
-Choose an expiration date and mark our calendar to generate and configure a new secret right before it expires.
+This value won't be shown again.
+Choose an expiration date and mark your calendar to generate and configure a new secret before it expires.
 ![copy security certificate value](./assets/sso_new_client_s11.png)
 
-Navigate to **Overview** in the sidebar and copy the `Application (client) ID` field for later use in the EMnify portal.
+Navigate to **Overview** in the sidebar and copy the **Application (client) ID** to use later in the EMnify portal.
 ![copy application id](./assets/sso_copy_application_id_s12.png)
 
 #### Configure the EMnify Portal
