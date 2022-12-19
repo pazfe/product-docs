@@ -1,7 +1,3 @@
----
-sidebar_position: 9
----
-
 # Single Sign-On
 
 With Single Sign-On (SSO) enabled, your organization can access the emnify Portal using Microsoft Business or Google Cloud Platform account credentials.
@@ -21,63 +17,51 @@ Instead, add an additional user to the emnify Portal with **Administrator** pr
 ### SSO with Microsoft
 
 Log in to Azure and navigate to **Azure Active Directoring** in the left sidebar.
-![Navigate to Azure Active Directory](./assets/sso_azure_active_directory.png)
 
-At the top of the page, click **+ Add** and then **App Registration**.
-![under add, click on app registration](./assets/sso_app_registration_s2.png)
-
-- Give it a **Name** (e.g., "emnify")
+At the top of the page, click **+ Add** and then **App Registration**. 
+From there:
+- Give your app a **Name** (e.g., "emnify")
 - The **Supported Account Types** should be `Multitenant`.
 This requests a consent screen on IDP verification in the Portal later. 
 - Set the Redirect URI to type `Web` with the value: `https://prod-e5.okta.com/oauth2/v1/authorize/callback`
-![Configure app registration details](./assets/sso_app_registration_details_s3.png)
-    
 
 Navigate to **Authentication** in the left sidebar, and in the section **Implicit grand and hybrid flows**, enable `Access tokens` and `ID tokens`.
-![SSO authentication settings](./assets/sso_authentication_settings_s4.png)
 
 Go to **Token configuration** in the left sidebar, click **Add optional claim**, and under **SAML**, enable the `upn` claim.
 Leave the option `Turn on the Microsoft Graph profile` permission unchecked.
-![SSO token configuration](./assets/sso_token_configuration_s5.png)
 
 Head to **API permissions** in the left sidebar, click the existing permission entry **Microsoft Graph (1)** and check the `email` and `profile` OpenID permissions.
-![set api permissions](./assets/sso_api_permissions_s6.png)
-
-Your configuration should look like this:
-![api permission configuration](./assets/sso_api_permissions_s7.png)
 
 In the left sidebar, go to **Expose an API**, click **Set**, and then click on **Save**.
-![set expose an api](./assets/sso_expose_api_s8.png)
 
 After navigating to **Certificates & Secrets** in the left sidebar, click **New client secret**.
-![new client secret](./assets/sso_new_client_s10.png)
 
 Copy the **Value** and save it to a secure location.
+
+:::danger
 This value won't be shown again.
+:::
+
 Choose an expiration date and mark your calendar to generate and configure a new secret before it expires.
-![copy security certificate value](./assets/sso_new_client_s11.png)
 
 Navigate to **Overview** in the sidebar and copy the **Application (client) ID** to use later in the emnify Portal.
-![copy application id](./assets/sso_copy_application_id_s12.png)
 
 ### Configure the emnify Portal
 
 Log in to your emnify account, go to Organization Settings (building icon) in the top-level navigation, and click **Single Sign-On**.
-![emnify Portal sso settings](./assets/sso_org_settings_s13.png)
 
 If you need SSO enabled for your account, contact support.
-![get support to enable sso for your account](./assets/sso_get_support_s14.png)
 
 Otherwise, click **Add** under the Microsoft SSO provider.
-![add microsoft sso](./assets/sso_add_s15.png)
 
 Fill in the **Client ID** and **Client Secret** with the values you copied earlier, then click **Create and Activate**.
-![create and activate](./assets/sso_create_activate_s16.png)
 
-The final step is to verify the provider.
-You must complete this step to configure SSO.
+The final step is to verify the provider. 
 Click on **Verify Integration** and follow the prompts.
-![verify the sso provider](./assets/sso_verify_s17.png)
+
+:::caution
+You must complete the final step and verify the provider to configure SSO.
+:::
 
 ## Troubleshooting
 
