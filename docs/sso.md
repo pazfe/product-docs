@@ -1,6 +1,6 @@
 # Single Sign-On
 
-With Single Sign-On (SSO) enabled, your organization can access the emnify Portal using Microsoft Business or Google Cloud Platform account credentials.
+With Single Sign-On (SSO) enabled, your organization can access the emnify Portal using Microsoft Business account credentials.
 
 ## Setup SSO with Microsoft Active Directory
 
@@ -20,7 +20,7 @@ Log in to Azure and navigate to **Azure Active Directoring** in the left sidebar
 
 At the top of the page, click **+ Add** and then **App Registration**. 
 From there:
-- Give your app a **Name** (e.g., "emnify")
+- Give your app a **Name** (e.g., "emnify").
 - The **Supported Account Types** should be `Multitenant`.
 This requests a consent screen on IDP verification in the Portal later. 
 - Set the Redirect URI to type `Web` with the value: `https://prod-e5.okta.com/oauth2/v1/authorize/callback`
