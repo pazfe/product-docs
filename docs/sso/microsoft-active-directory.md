@@ -1,8 +1,6 @@
-# Single Sign-On
+# Setup SSO with Microsoft Active Directory
 
-With Single Sign-On (SSO) enabled, your organization can access the emnify Portal using Microsoft Business account credentials.
-
-## Setup SSO with Microsoft Active Directory
+This guide walks through enabling single sign-on (SSO), so your organization can access the [emnify Portal](https://portal.emnify.com/) using your Microsoft Business credentials.
 
 **Prerequisites:**
 
@@ -14,7 +12,7 @@ If your email address used in the emnify Portal differs from the one used to log
 Instead, add an additional user to the emnify Portal with **Administrator** privileges.
 :::
 
-### SSO with Microsoft
+## SSO with Microsoft
 
 Log in to Azure and navigate to **Azure Active Directoring** in the left sidebar.
 
@@ -46,7 +44,7 @@ Choose an expiration date and mark your calendar to generate and configure a new
 
 Navigate to **Overview** in the sidebar and copy the **Application (client) ID** to use later in the emnify Portal.
 
-### Configure the emnify Portal
+## Configure the emnify Portal
 
 Log in to your emnify account, go to Organization Settings (building icon) in the top-level navigation, and click **Single Sign-On**.
 
@@ -63,18 +61,6 @@ Click on **Verify Integration** and follow the prompts.
 You must complete the final step and verify the provider to configure SSO.
 :::
 
-## Troubleshooting
-
-If you encounter any issues while setting up SSO, use the following suggestions to help troubleshoot.
-
-**Microsoft Active Directory**
-
-- Are you part of the Azure Tenant?
-- Do you see a `User canceled social login` message? Make sure the application registration is set to **Multitenant**.
-
-**General**
-
-- Are you part of the emnify enterprise?
-- Is your user account enabled on emnify?
-
-If everything looks correct and you still have issues, try again using an incognito tab.
+:::tip
+We have a [Troubleshooting page](troubleshooting#microsoft-active-directory) if you encounter issues while setting up SSO.
+:::

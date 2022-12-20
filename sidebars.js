@@ -42,7 +42,28 @@ const sidebars = {
         'integration/datastreamer-wialon-flespi',
       ],
     },
-    'sso',
+    {
+      type: 'category',
+      label: 'Single Sign-On',
+      link: { type: 'doc', id: 'sso/overview' },
+      items: [
+        {
+          type: 'doc',
+          label: 'Microsoft Active Directory',
+          id: 'sso/microsoft-active-directory'
+        },
+        {
+          type: 'doc',
+          label: 'Google Cloud Platform',
+          id: 'sso/google-cloud-platform'
+        },
+        {
+          type: 'doc',
+          label: 'Troubleshooting',
+          id: 'sso/troubleshooting'
+        }
+      ],
+    },
     'glossary',
   ]
 };
