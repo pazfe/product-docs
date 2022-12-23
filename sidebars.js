@@ -33,9 +33,8 @@ const sidebars = {
     {
       type: 'category',
       label: 'Quickstart',
-      link: {type: 'doc', id: 'quickstart/index'},
+      link: {type: 'doc', id: 'quickstart/order-a-sim-package'},
       items: [
-        'quickstart/order-a-sim-package',
         'quickstart/registering-sims',
         {
           type: 'category',
@@ -82,18 +81,6 @@ const sidebars = {
         'rest-api/api-authentication',
         'rest-api/sending-and-receiving-sms',
         'rest-api/code-samples',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Integration Guides',
-      // link: {type: 'doc', id: 'integration/'},
-      items: [
-        'integration/amazon-web-services',
-        'integration/microsoft-azure',
-        'integration/google-cloud',
-        'integration/webhooks',
-        'integration/more-integrations',
       ],
     },
     {
