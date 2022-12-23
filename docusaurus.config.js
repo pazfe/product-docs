@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "emnify Docs",
+  title: "emnify Documentation",
   tagline: "Solutions for your deployments",
   url: "https://docs.emnify.com",
   baseUrl: "/",
@@ -59,39 +59,27 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Developer Hub",
+        title: "",
         logo: {
           alt: "emnify Logo",
           src: "img/logo.png",
+          href: "https://emnify.com/"
         },
+/*
         items: [
           {
-            href: "https://www.emnify.com/developer-blog",
+            href: "https://",
             position: "left",
-            label: "Blog",
+            label: "",
           },
-          {
-            label: "emnify API",
-            href: "https://cdn.emnify.net/api/doc/swagger.html?__hstc=115846617.4e595f58851491bb8576507ce2561f79.1670194662635.1671607748521.1671620155218.32&__hssc=115846617.14.1671620155218&__hsfp=3017379904",
-            position: "left",
-          },
-          {
-            label: "Solutions by Industry",
-            href: "https://www.emnify.com/industries",
-            position: "left",
-          },
-          {
-            label: "Change Logs",
-            href: "https://cdn.emnify.net/api/doc/changelog.html?__hstc=115846617.4e595f58851491bb8576507ce2561f79.1670194662635.1671607748521.1671620155218.32&__hssc=115846617.21.1671620155218&__hsfp=3017379904",
-            position: "right"
-          },
-          // { to: "/blog", label: "Change Log", position: "right" },
+          { to: "/blog", label: "Change Log", position: "right" },
           {
             href: "https://github.com/emnify/product-docs/#readme",
             label: "GitHub",
             position: "right",
           },
         ],
+*/
       },
       footer: {
         style: "dark",

@@ -37,8 +37,19 @@ const sidebars = {
       items: [
         'quickstart/order-a-sim-package',
         'quickstart/registering-sims',
-        'quickstart/devices/creating-a-device',
-        'quickstart/getting-the-first-device-online',
+        {
+          type: 'category',
+          label: 'Devices',
+          link: {type: 'doc', id: 'quickstart/devices/creating-a-device'},
+          items: [
+            'quickstart/devices/getting-the-first-device-online',
+            'quickstart/devices/android',
+            'quickstart/devices/ios-devices',
+            'quickstart/devices/cellular-modules',
+            'quickstart/devices/gps-trackers',
+            'quickstart/devices/industrial-routers',
+          ],
+        },
         'quickstart/troubleshooting',
       ],
     },
