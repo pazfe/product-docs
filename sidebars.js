@@ -64,6 +64,40 @@ const sidebars = {
         'events/event-types',
         'events/mno-events',
         'events/usage'
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Software Development Kits',
+      link: { type: 'doc', id: 'sdk/python/index' },
+      items: [
+        {
+          type: 'category',
+          label: 'Python',
+          link: { type: 'doc', id: 'sdk/python/index' },
+          items: [
+            {
+              type: 'doc',
+              label: 'Getting Started',
+              id: 'sdk/python/index'
+            },
+            {
+              type: 'doc',
+              label: 'Concepts',
+              id: 'sdk/python/concepts'
+            },
+            {
+              type: 'doc',
+              label: 'Examples',
+              id: 'sdk/python/examples'
+            },
+            {
+              type: 'doc',
+              label: 'Getting Help and Contributing',
+              id: 'sdk/python/help'
+            }
+          ],
+        },
       ],
     },
     {
