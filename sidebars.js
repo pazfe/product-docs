@@ -105,6 +105,11 @@ const sidebars = {
               type: 'doc',
               label: 'Getting Help and Contributing',
               id: 'sdk/python/help'
+            },
+            {
+              type: 'link',
+              label: 'API Reference',
+              href: 'https://emnify.github.io/emnify-sdk-python/autoapi/index.html'
             }
           ],
         },
