@@ -1,3 +1,7 @@
+---
+description: Code samples showing how to use the SDK.
+---
+
 # Examples
 
 ## Get your first devices online

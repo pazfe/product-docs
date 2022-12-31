@@ -69,17 +69,27 @@ const sidebars = {
     {
       type: 'category',
       label: 'Software Development Kits',
-      link: { type: 'doc', id: 'sdk/python/index' },
+      link: { 
+        type: 'generated-index', 
+        title: 'emnify SDKs',
+        description: 'The emnify software development kits (SDKs) allow developers to manage their IoT devices using an intuitive set of APIs, including SIM state management and device connectivity operations.',
+        slug: '/sdks'
+      },
       items: [
         {
           type: 'category',
           label: 'Python',
-          link: { type: 'doc', id: 'sdk/python/index' },
+          link: { 
+            type: 'generated-index', 
+            title: 'emnify Python SDK',
+            description: 'The alpha release of the new emnify Python software development kit (SDK) for SIM state management and device connectivity operations.',
+            slug: '/sdks/python'
+          },
           items: [
             {
               type: 'doc',
               label: 'Getting Started',
-              id: 'sdk/python/index'
+              id: 'sdk/python/getting-started'
             },
             {
               type: 'doc',

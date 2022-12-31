@@ -1,3 +1,7 @@
+---
+description: Get support and give us feedback.
+---
+
 # Getting help and contributing
 
 - If you need help using our services, please [file a support ticket](https://support.emnify.com/hc/en-us/requests/new).
