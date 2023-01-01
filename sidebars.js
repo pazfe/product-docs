@@ -36,10 +36,43 @@ const sidebars = {
     'rest-api',
     {
       type: 'category',
-      label: 'Integration Guides',
-      link: {type: 'doc', id: 'integration/datastreamer-wialon-flespi'},
+      label: 'Data Streamer',
+      link: { 
+        type: 'generated-index', 
+        title: 'emnify multicloud Data Streamer',
+        slug: 'data-streamer'
+      },
       items: [
-        'integration/datastreamer-wialon-flespi',
+        {
+          type: 'doc',
+          label: 'Getting Started',
+          id: 'data-streamer/getting-started'
+        },
+        {
+          type: 'doc',
+          label: 'Connection Types',
+          id: 'data-streamer/connection-types'
+        },
+        {
+          type: 'doc',
+          label: 'Stream Types',
+          id: 'data-streamer/stream-types'
+        },
+        {
+          type: 'doc',
+          label: 'Managing Data Streams',
+          id: 'data-streamer/managing-data-streams'
+        },
+        {
+          type: 'doc',
+          label: 'Using the Data Streamer',
+          id: 'data-streamer/usage'
+        },
+        {
+          type: 'doc',
+          label: 'Available Integrations',
+          id: 'data-streamer/available-integrations'
+        }
       ],
     },
     {
