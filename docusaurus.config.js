@@ -62,7 +62,8 @@ const config = {
         title: "Developer",
         logo: {
           alt: "EMnify Logo",
-          src: "img/logo-word-blue-295x80.png",
+          src: 'img/logo-word-blue-295x80.png',
+          srcDark: 'img/logo-word-white-295x80.png',
         },
       },
       footer: {
