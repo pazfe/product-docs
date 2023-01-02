@@ -16,10 +16,9 @@ EMnify offers the following high-level products and services:
     - With [Mobile Network Aggregation](services#mobile-network-aggregation) 
     - Access to all [Radio Access Types](services#radio-access-types) including IoT optimized [LPWAN: LTE-M/NB-IoT](services#lpwan-lte-mnb-iot)
 - The EMnify [IoT Cloud Communication Platform](services#iot-cloud-communication-platform) including
-    - [User Interface](https://portal.emnify.com/sign/up?utm-source=dev-hub) for operating and managing connectivity and SIMs
+    - [User Interface](https://portal.emnify.com/sign/up) for operating and managing connectivity and SIMs
     - [Distributed Data Plane](services#distributed-data-plane)
     - with [Regional Breakout](services#regional-breakout) to ensure data does not traverse continents
-- The [Data Streamer](services#data-streamer) to integrate connectivity data into services for IoT operations
 - A holistic SASE oriented approach for a central control over [Security](services#security) and networks
     - [DNS](services#dns) 
     - [IMEI Lock](services#imei-lock)
