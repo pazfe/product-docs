@@ -61,7 +61,7 @@ const config = {
       navbar: {
         title: "Developer",
         logo: {
-          alt: "EMnify Logo",
+          alt: "emnify Documentation – Home",
           src: 'img/logo-word-blue-295x80.png',
           srcDark: 'img/logo-word-white-295x80.png',
         },
