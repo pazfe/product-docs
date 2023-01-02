@@ -59,7 +59,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Developer",
+        title: "Developers",
         logo: {
           alt: "emnify Documentation – Home",
           src: 'img/logo-word-blue-295x80.png',
