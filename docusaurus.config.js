@@ -10,7 +10,7 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.svg",
+  favicon: "img/favicon.ico",
 
   // GitHub pages deployment config (just in case)
   organizationName: "emnify",
@@ -43,25 +43,12 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Home",
+        title: "Developers",
         logo: {
-          alt: "EMnify Logo",
-          src: "img/Logo-web_logo-white-onblue.svg",
+          alt: "emnify Documentation – Home",
+          src: 'img/logo-word-blue-295x80.png',
+          srcDark: 'img/logo-word-white-295x80.png',
         },
-        items: [
-          {
-            type: "doc",
-            docId: "cellular-iot",
-            position: "left",
-            label: "Cellular IoT",
-          },
-          { to: "/blog", label: "Change Log", position: "left" },
-          {
-            href: "https://github.com/facebook/docusaurus",
-            label: "GitHub",
-            position: "right",
-          },
-        ],
       },
       footer: {
         style: "dark",
