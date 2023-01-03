@@ -1,3 +1,0 @@
-# Cloud Connect
-
-Coming soon!

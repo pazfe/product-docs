@@ -1,3 +1,0 @@
-# SMS
-
-Coming soon!
