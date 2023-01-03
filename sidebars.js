@@ -77,6 +77,21 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Events',
+      link: {
+        type: 'generated-index', 
+        title: 'emnify system events',
+        slug: '/events'
+      },
+      items: [
+        'events/getting-started',
+        'events/event-types',
+        'events/mno-events',
+        'events/usage'
+      ],
+    },
+    {
+      type: 'category',
       label: 'Single Sign-On',
       link: { type: 'doc', id: 'sso/overview' },
       items: [

@@ -11,7 +11,7 @@ Streaming event and usage data within one stream is possible but not advised, as
 
 ## Event data
 
-The emnify platform generates several types of events. 
+The emnify system generates several types of events. 
 These events allow you to track notable system occurances based on behavior.
 
 Some common use cases for events on emnify include:
@@ -20,7 +20,9 @@ Some common use cases for events on emnify include:
 - **Monitoring** (e.g., SIM or data connection lifecycles)
 - **Input for custom billing systems** (i.e., updating billing configuration, processing invoices, etc.)
 
-<!-- TODO: Add link to Events docs once published -->
+:::tip
+Learn more about the available event types and how to use them in the [Event documentation](../events/getting-started).
+:::
 
 ## Usage data
 
