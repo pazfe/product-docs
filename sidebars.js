@@ -86,26 +86,10 @@ const sidebars = {
             slug: '/sdks/python'
           },
           items: [
-            {
-              type: 'doc',
-              label: 'Getting Started',
-              id: 'sdk/python/getting-started'
-            },
-            {
-              type: 'doc',
-              label: 'Concepts',
-              id: 'sdk/python/concepts'
-            },
-            {
-              type: 'doc',
-              label: 'Examples',
-              id: 'sdk/python/examples'
-            },
-            {
-              type: 'doc',
-              label: 'Getting Help and Contributing',
-              id: 'sdk/python/help'
-            },
+            'sdks/python/getting-started',
+            'sdks/python/concepts',
+            'sdks/python/examples',
+            'sdks/python/help',
             {
               type: 'link',
               label: 'API Reference',
