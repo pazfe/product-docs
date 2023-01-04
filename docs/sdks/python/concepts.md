@@ -1,5 +1,5 @@
 ---
-description: Must-knows for working with the Python SDK.
+description: Must-knows for working with the Python SDK
 ---
 
 # Concepts

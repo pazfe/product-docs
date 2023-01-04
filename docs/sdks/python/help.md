@@ -1,5 +1,5 @@
 ---
-description: Get support and give us feedback.
+description: Get support and give us feedback
 ---
 
 # Help and contributing

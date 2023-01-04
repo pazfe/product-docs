@@ -1,6 +1,6 @@
 ---
 title: Getting started
-description: Step-by-step guide for installing and using the SDK.
+description: Step-by-step guide for installing and using the SDK
 ---
 
 # Getting started with the emnify Python SDK

@@ -1,5 +1,5 @@
 ---
-description: Code samples showing how to use the SDK.
+description: Code samples showing how to use the SDK
 ---
 
 # Examples
