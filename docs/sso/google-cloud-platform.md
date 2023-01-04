@@ -1,5 +1,5 @@
 ---
-description: Setup SSO with Google Cloud Platform.
+description: Setup SSO with Google Cloud Platform
 ---
 
 # Setup SSO with Google Cloud Platform

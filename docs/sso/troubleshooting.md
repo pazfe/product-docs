@@ -1,5 +1,5 @@
 ---
-description: Tips for combating common SSO issues.
+description: Tips for combating common SSO issues
 ---
 
 # Troubleshooting

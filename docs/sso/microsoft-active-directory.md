@@ -1,5 +1,5 @@
 ---
-description: Setup SSO with Microsoft Active Directory.
+description: Setup SSO with Microsoft Active Directory
 ---
 
 # Setup SSO with Microsoft Active Directory
