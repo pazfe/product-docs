@@ -19,12 +19,10 @@ jobs:
 
       - name: Install and build
         run: |
-          yarn
+          yarn install --frozen-lockfile
           yarn build
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: build
-          umbrella-dir: docs/pr-preview
-          
+          source-dir: ./build
