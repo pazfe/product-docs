@@ -6,8 +6,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "emnify Documentation",
   tagline: "Developer resources and documentation for the emnify SuperNetwork.",
-  url: "https://docs.emnify.com",
-  baseUrl: "/",
+  url: "https://emnify.github.io",
+  baseUrl: "/product-docs/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -15,6 +15,8 @@ const config = {
   // GitHub pages deployment config
   organizationName: "emnify",
   projectName: "product-docs",
+  deploymentBranch: "gh-pages",
+  trailingSlash: false,
 
   i18n: {
     defaultLocale: "en",
@@ -29,8 +31,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/",
-          editUrl:
-            "https://github.com/EMnify/product-docs/blob/main/",
+          editUrl: "https://github.com/EMnify/product-docs/blob/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -46,8 +47,8 @@ const config = {
         title: "Developers",
         logo: {
           alt: "emnify Documentation – Home",
-          src: 'img/logo-word-blue-295x80.png',
-          srcDark: 'img/logo-word-white-295x80.png',
+          src: "img/logo-word-blue-295x80.png",
+          srcDark: "img/logo-word-white-295x80.png",
         },
       },
       footer: {
@@ -62,12 +63,12 @@ const config = {
               },
               {
                 label: "Integration guides",
-                href: "https://www.emnify.com/integration-guides"
+                href: "https://www.emnify.com/integration-guides",
               },
               {
                 label: "REST API reference",
-                href: "https://cdn.emnify.net/api/doc/index.html"
-              }
+                href: "https://cdn.emnify.net/api/doc/index.html",
+              },
             ],
           },
           {
@@ -75,16 +76,16 @@ const config = {
             items: [
               {
                 label: "Open a ticket",
-                href: "https://support.emnify.com/hc/en-us"
+                href: "https://support.emnify.com/hc/en-us",
               },
               {
                 label: "Request a feature",
-                href: "https://emnify.canny.io/"
+                href: "https://emnify.canny.io/",
               },
               {
                 label: "System status",
-                href: "https://status.emnify.com/"
-              }
+                href: "https://status.emnify.com/",
+              },
             ],
           },
           {
@@ -96,7 +97,7 @@ const config = {
               },
               {
                 label: "Developer blog",
-                href: "https://www.emnify.com/developer-blog"
+                href: "https://www.emnify.com/developer-blog",
               },
               {
                 label: "Twitter",
