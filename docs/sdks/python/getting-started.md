@@ -1,5 +1,4 @@
 ---
-title: Getting started
 description: Step-by-step guide for installing and using the SDK
 ---
 

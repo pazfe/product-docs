@@ -86,7 +86,11 @@ const sidebars = {
             slug: '/sdks/python'
           },
           items: [
-            'sdks/python/getting-started',
+            {
+              type: 'doc',
+              label: 'Getting started',
+              id: 'sdks/python/getting-started'
+            },
             'sdks/python/concepts',
             'sdks/python/examples',
             'sdks/python/help',
