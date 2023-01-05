@@ -51,8 +51,13 @@ const sidebars = {
       type: 'category',
       label: 'Single Sign-On',
       link: { 
-        type: 'doc', 
-        id: 'sso/overview' 
+        
+        type: 'generated-index', 
+        description: 'With Single Sign-On (SSO) enabled, your organization can access the emnify Portal using your exist
+        ing account credentials.',
+        slug: '/sso',
+        title: 'Single Sign-On'
+      
       },
       items: [
         {
