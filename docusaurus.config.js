@@ -1,6 +1,5 @@
 // @ts-check
-const lightCodeTheme = require("prism-react-renderer/themes/vsLight");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const lightCodeTheme = require("prism-react-renderer/themes/github");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -45,35 +44,38 @@ const config = {
     ({
       metadata: [
         {
-          name: 'description', 
-          content: 'Check our documentation for emnify API and Services including Data Streamer, Cloud Connect, Security, SIM management.'
+          name: "description",
+          content:
+            "Check our documentation for emnify API and Services including Data Streamer, Cloud Connect, Security, SIM management.",
         },
         {
-          property: 'og:title',
-          content: 'Documentation for Developers | emnify'
+          property: "og:title",
+          content: "Documentation for Developers | emnify",
         },
         {
-          property: 'og:description',
-          content: 'Check our documentation for emnify API and Services including Data Streamer, Cloud Connect, Security, SIM management.'
+          property: "og:description",
+          content:
+            "Check our documentation for emnify API and Services including Data Streamer, Cloud Connect, Security, SIM management.",
         },
         {
-          name: 'twitter:title',
-          content: 'Documentation for Developers | emnify'
+          name: "twitter:title",
+          content: "Documentation for Developers | emnify",
         },
         {
-          name: 'twitter:description',
-          content: 'Check our documentation for emnify API and Services including Data Streamer, Cloud Connect, Security, SIM management.'
+          name: "twitter:description",
+          content:
+            "Check our documentation for emnify API and Services including Data Streamer, Cloud Connect, Security, SIM management.",
         },
-        {
-
-        }
+        {},
       ],
+      colorMode: {
+        disableSwitch: true,
+      },
       navbar: {
         title: "Developers",
         logo: {
           alt: "emnify Documentation – Home",
           src: "img/logo-word-blue-295x80.png",
-          srcDark: "img/logo-word-white-295x80.png",
         },
       },
       footer: {
@@ -134,7 +136,6 @@ const config = {
       },
       prism: {
         theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
       },
     }),
 };
