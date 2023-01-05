@@ -1,5 +1,5 @@
 // @ts-check
-const lightCodeTheme = require("prism-react-renderer/themes/github");
+const lightCodeTheme = require("prism-react-renderer/themes/vsLight");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
@@ -77,7 +77,6 @@ const config = {
         },
       },
       footer: {
-        style: "dark",
         links: [
           {
             title: "Resources",
