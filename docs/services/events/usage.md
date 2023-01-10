@@ -28,8 +28,6 @@ Then, navigate to the **Integrations** page by clicking the **Integrations** men
 
 If there are no data streams configured, the **Data Streams** panel displays all available connection types as tiles.
 
-<!-- TODO: Add screenshot with updated Portal branding -->
-
 If you already have a data stream configured, the panel displays all existing streams, ordered by creation date (newest on the top). 
 This list view can be used to gain an overview of the current states of different data streams. 
 
@@ -37,7 +35,10 @@ Data streams are marked as **Running** are properly operating.
 Failed streams exhibit an **Error** status.
 Paused streams are marked as **Paused**.
 
-<!-- TODO: Add screenshot with updated Portal branding -->
+<img
+  src={require('../assets/portal-integrations-data-streams-status.png').default}
+  alt=""
+/>
 
 The **Details** button allows you to inspect the configuration of the specific stream.
 
@@ -49,7 +50,10 @@ The data streamer can apply filtering for event data streams based on event type
 Under **Event Options**, you can choose to **Stream all events** or **Stream specific events only**. 
 Selecting the latter will display a searchable dropdown listing all [event types](event-types) available as filters. 
 
-<!-- TODO: Add screenshot with updated Portal branding -->
+<img
+  src={require('../assets/portal-integrations-data-streams-details-events-filter.png').default}
+  alt=""
+/>
 
 :::tip
 You can also create, update, and delete data streams using the Portal.
@@ -115,8 +119,20 @@ There are several ways to view or trigger events within [the emnify Portal](http
 Here's where you can find event information in the Portal: 
 
 - **Dashboard**: Overview of all event activity within your organization. 
+<img
+  src={require('./assets/portal-dashboard-events.png').default}
+  alt=""
+/>
 - **Connected Devices** → **Details** → **Events**: List of triggered events for a particular device (also referred to as an "endpoint").
+<img
+  src={require('./assets/portal-connected-devices-details-events.png').default}
+  alt=""
+/>
 - **SIM Inventory** → **Details** → **Events**: List of triggered events for a particular SIM card.
+<img
+  src={require('./assets/portal-sim-inventory-details-events.png').default}
+  alt=""
+/>
 
 :::info
 Any events triggered in the [Portal](https://portal.emnify.com/) will show **API** as the [event source](getting-started#event-source).
@@ -136,3 +152,8 @@ Only listed for relevant network events.
 - **Country**: The country where the MNO listed in the `Operator` field is providing the cellular service.
 - **ID**: A generated unique identifier for the event.
 - **Description**: What happened, why (in some cases), and any additional details associated with the event type.
+
+<img
+  src={require('./assets/portal-dashboard-event-details.png').default}
+  alt=""
+/>
