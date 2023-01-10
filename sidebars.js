@@ -67,7 +67,12 @@ const sidebars = {
         'services/data-streamer/stream-types',
         'services/data-streamer/managing-data-streams',
         'services/data-streamer/usage',
-        'services/data-streamer/available-integrations'
+        'services/data-streamer/available-integrations',
+        {
+          type: 'link',
+          label: 'Integration guides',
+          href: 'https://www.emnify.com/integration-guides'
+        }
       ],
         },
         {
