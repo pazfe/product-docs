@@ -30,7 +30,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/",
-          editUrl: "https://github.com/EMnify/product-docs/blob/main/",
+          editUrl: "https://github.com/emnify/product-docs/blob/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -71,10 +71,16 @@ const config = {
         disableSwitch: true
       },
       navbar: {
-        title: "Developers",
+        title: "Documentation",
         logo: {
           alt: "emnify Documentation – Home",
           src: "img/logo-word-blue-295x80.png",
+        },
+      },
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true
         },
       },
       footer: {
