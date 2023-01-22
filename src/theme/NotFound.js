@@ -28,6 +28,7 @@ export default function NotFound() {
               <p>
                 <Translate
                   id="theme.NotFound.p1"
+                  // eslint-disable-next-line
                   description="The first paragraph of the 404 page">
                   We could not find what you were looking for. 
                   The link to this page may be incorrect or out of date. 
@@ -35,8 +36,9 @@ export default function NotFound() {
               </p>
               <p
                 id="theme.NotFound.p2"
+                // eslint-disable-next-line
                 description="The 2nd paragraph of the 404 page">
-                Please <a className={styles.pageLink} href="https://github.com/emnify/product-docs/issues/new" target="_blank" rel="noopener noreferrer">open an issue on GitHub</a> or <a className={styles.pageLink} href="mailto:docs@emnify.com">contact our documentation team</a> if you're struggling to find what you need.
+                Please <a className={styles.pageLink} href="https://github.com/emnify/product-docs/issues/new" target="_blank" rel="noopener noreferrer">open an issue on GitHub</a> or <a className={styles.pageLink} href="mailto:docs@emnify.com">contact our documentation team</a> if you are struggling to find what you need.
               </p>
               <Link to="/product-docs" className={styles.homepageButton}>Go to homepage</Link>
             </div>
