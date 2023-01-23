@@ -1,39 +1,39 @@
 // @ts-check
-const lightCodeTheme = require("prism-react-renderer/themes/vsLight");
+const lightCodeTheme = require('prism-react-renderer/themes/vsLight');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "emnify Documentation",
-  tagline: "Developer resources and documentation for the emnify SuperNetwork.",
-  url: "https://emnify.github.io",
-  baseUrl: "/product-docs/",
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  title: 'emnify Documentation',
+  tagline: 'Developer resources and documentation for the emnify SuperNetwork.',
+  url: 'https://emnify.github.io',
+  baseUrl: '/product-docs/',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+  favicon: 'img/favicon.ico',
 
   // GitHub pages deployment config
-  organizationName: "emnify",
-  projectName: "product-docs",
-  deploymentBranch: "gh-pages",
+  organizationName: 'emnify',
+  projectName: 'product-docs',
+  deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: 'en',
+    locales: ['en'],
   },
 
   presets: [
     [
-      "classic",
+      'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          routeBasePath: "/",
-          editUrl: "https://github.com/emnify/product-docs/blob/main/",
+          sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/',
+          editUrl: 'https://github.com/emnify/product-docs/blob/main/',
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
@@ -65,43 +65,44 @@ const config = {
     ({
       metadata: [
         {
-          name: 'description', 
-          content: 'Check our documentation for emnify API and Services including Data Streamer, Cloud Connect, Security, SIM management.'
+          name: 'description',
+          content:
+            'Check our documentation for emnify API and Services including Data Streamer, Cloud Connect, Security, SIM management.',
         },
         {
           property: 'og:title',
-          content: 'Documentation for Developers | emnify'
+          content: 'Documentation for Developers | emnify',
         },
         {
           property: 'og:description',
-          content: 'Check our documentation for emnify API and Services including Data Streamer, Cloud Connect, Security, SIM management.'
+          content:
+            'Check our documentation for emnify API and Services including Data Streamer, Cloud Connect, Security, SIM management.',
         },
         {
           name: 'twitter:title',
-          content: 'Documentation for Developers | emnify'
+          content: 'Documentation for Developers | emnify',
         },
         {
           name: 'twitter:description',
-          content: 'Check our documentation for emnify API and Services including Data Streamer, Cloud Connect, Security, SIM management.'
+          content:
+            'Check our documentation for emnify API and Services including Data Streamer, Cloud Connect, Security, SIM management.',
         },
-        {
-
-        }
+        {},
       ],
       colorMode: {
-        disableSwitch: true
+        disableSwitch: true,
       },
       navbar: {
-        title: "Documentation",
+        title: 'Documentation',
         logo: {
-          alt: "emnify Documentation – Home",
-          src: "img/logo-word-blue-295x80.png",
+          alt: 'emnify Documentation – Home',
+          src: 'img/logo-word-blue-295x80.png',
         },
       },
       docs: {
         sidebar: {
           hideable: true,
-          autoCollapseCategories: true
+          autoCollapseCategories: true,
         },
       },
       footer: {
@@ -112,50 +113,50 @@ const config = {
         },
         links: [
           {
-            title: "Resources",
+            title: 'Resources',
             items: [
               {
-                label: "emnify website",
-                href: "https://www.emnify.com/",
+                label: 'emnify website',
+                href: 'https://www.emnify.com/',
               },
               {
-                label: "Developer blog",
-                href: "https://www.emnify.com/developer-blog",
+                label: 'Developer blog',
+                href: 'https://www.emnify.com/developer-blog',
               },
             ],
           },
           {
-            title: "Support",
+            title: 'Support',
             items: [
               {
-                label: "Open a ticket",
-                href: "https://support.emnify.com/hc/en-us",
+                label: 'Open a ticket',
+                href: 'https://support.emnify.com/hc/en-us',
               },
               {
-                label: "Request a feature",
-                href: "https://emnify.canny.io/",
+                label: 'Request a feature',
+                href: 'https://emnify.canny.io/',
               },
             ],
           },
           {
-            title: "Social",
+            title: 'Social',
             items: [
               {
-                label: "GitHub",
-                href: "https://github.com/emnify/",
+                label: 'GitHub',
+                href: 'https://github.com/emnify/',
               },
               {
-                label: "Twitter",
-                href: "https://twitter.com/emnify",
+                label: 'Twitter',
+                href: 'https://twitter.com/emnify',
               },
             ],
           },
           {
-            title: "Legal",
+            title: 'Legal',
             items: [
               {
-                label: "Imprint",
-                href: "https://www.emnify.com/imprint-disclaimer"
+                label: 'Imprint',
+                href: 'https://www.emnify.com/imprint-disclaimer',
               },
               {
                 label: "Privacy policy",
@@ -174,7 +175,7 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} emnify GmbH. All rights reserved.`,
       },
       prism: {
-        theme: lightCodeTheme
+        theme: lightCodeTheme,
       },
     }),
 };
