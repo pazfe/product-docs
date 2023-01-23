@@ -17,6 +17,7 @@ build
 
 # Generated files
 .github/ISSUE_TEMPLATE
+.husky
 .docusaurus
 .cache-loader
 
