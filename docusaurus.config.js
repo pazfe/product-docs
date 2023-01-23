@@ -64,6 +64,24 @@ const config = {
     }
   ],
 
+  plugins: [
+    [
+      "@graphql-markdown/docusaurus",
+      {
+        schema: "./graphql/schema.graphql",
+        rootPath: "./docs/graphql", // docs will be generated under './docs/graphql' (rootPath/baseURL)
+        baseURL: "/graphql/",
+        linkRoot: "/graphql/",
+        docOptions: {
+          index: true,
+        },
+        loaders: {
+          GraphQLFileLoader: "@graphql-tools/graphql-file-loader" // local file schema
+        },
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({

@@ -1,0 +1,145 @@
+---
+id: pdp-context
+title: PdpContext
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type PdpContext {
+  id: String!
+  duration: String!
+  teid_data_plane: Float!
+  teid_control_plane: Float!
+  gtp_version: Float!
+  nsapi: Float!
+  sgsn_control_plane_ip_address: String!
+  sgsn_data_plane_ip_address: String!
+  ggsn_control_plane_ip_address: String!
+  ggsn_data_plane_ip_address: String!
+  created: DateTime!
+  mcc: String
+  mnc: String
+  lac: Float
+  ci: Float
+  sac: Float
+  rac: Float
+  ue_ip_address: String!
+  imeisv: String
+  region: String
+  breakout_ip: String
+  rat_type: RatType
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>id</b></code>](#)<Bullet />[`String!`](/graphql/graphql/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>duration</b></code>](#)<Bullet />[`String!`](/graphql/graphql/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>teid_data_plane</b></code>](#)<Bullet />[`Float!`](/graphql/graphql/scalars/float) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>teid_control_plane</b></code>](#)<Bullet />[`Float!`](/graphql/graphql/scalars/float) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>gtp_version</b></code>](#)<Bullet />[`Float!`](/graphql/graphql/scalars/float) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>nsapi</b></code>](#)<Bullet />[`Float!`](/graphql/graphql/scalars/float) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>sgsn_control_plane_ip_address</b></code>](#)<Bullet />[`String!`](/graphql/graphql/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>sgsn_data_plane_ip_address</b></code>](#)<Bullet />[`String!`](/graphql/graphql/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>ggsn_control_plane_ip_address</b></code>](#)<Bullet />[`String!`](/graphql/graphql/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>ggsn_data_plane_ip_address</b></code>](#)<Bullet />[`String!`](/graphql/graphql/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>created</b></code>](#)<Bullet />[`DateTime!`](/graphql/graphql/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>mcc</b></code>](#)<Bullet />[`String`](/graphql/graphql/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>mnc</b></code>](#)<Bullet />[`String`](/graphql/graphql/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>lac</b></code>](#)<Bullet />[`Float`](/graphql/graphql/scalars/float) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>ci</b></code>](#)<Bullet />[`Float`](/graphql/graphql/scalars/float) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>sac</b></code>](#)<Bullet />[`Float`](/graphql/graphql/scalars/float) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>rac</b></code>](#)<Bullet />[`Float`](/graphql/graphql/scalars/float) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>ue_ip_address</b></code>](#)<Bullet />[`String!`](/graphql/graphql/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>imeisv</b></code>](#)<Bullet />[`String`](/graphql/graphql/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>region</b></code>](#)<Bullet />[`String`](/graphql/graphql/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>breakout_ip</b></code>](#)<Bullet />[`String`](/graphql/graphql/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PdpContext.<b>rat_type</b></code>](#)<Bullet />[`RatType`](/graphql/graphql/objects/rat-type) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+### Member of
+
+[`Connectivity`](/graphql/graphql/objects/connectivity)  <Badge class="secondary" text="object"/>
+
+
+

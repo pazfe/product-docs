@@ -1,0 +1,463 @@
+type ListMetaObject {
+  count: Int!
+  pages: Int!
+  per_page: Int!
+}
+
+type EndpointStatus {
+  id: Int!
+  description: String!
+}
+
+type TariffProfile {
+  id: Float!
+  name: String!
+}
+
+type SimStatus {
+  id: Int!
+  description: String!
+}
+
+type Sim {
+  id: Float!
+  iccid: String!
+  status: SimStatus!
+  ismi: String
+  msisdn: String
+}
+
+type ServiceProfile {
+  id: Float!
+  name: String!
+}
+
+type Endpoint {
+  id: Float!
+  name: String!
+  organisation_id: Float!
+  ip_address: String
+  created: DateTime!
+  last_updated: DateTime!
+  ip_address_space: Float
+  status: EndpointStatus!
+  tags: String
+  imei: String
+  imei_lock: Boolean
+  sims: [Sim!]
+  service_profile: ServiceProfile!
+  tariff_profile: TariffProfile!
+  connectivity: Connectivity
+  stats(skipLastHour: Boolean = true): Stats
+  stats_daily(start: DateTime, end: DateTime): EndpointDaily
+  sim: Sim
+}
+
+# A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+scalar DateTime
+
+type EndpointPaging {
+  items: [Endpoint!]
+  meta: ListMetaObject!
+}
+
+type Country {
+  id: Float!
+  name: String!
+  country_code: String!
+  iso_code: String!
+  mcc: String!
+  latitude: String
+  longitude: String
+}
+
+type LocationOperator {
+  id: Float!
+  name: Float!
+  country_id: Float!
+  country_name: String!
+}
+
+type Location {
+  iccid: String!
+  imsi: String!
+  last_updated: DateTime
+  last_updated_gprs: DateTime
+  sgsn_number: String
+  vlr_number: String
+  msc: String
+  sgsn_ip_address: String
+  country: Country
+  operator: LocationOperator
+}
+
+type RatType {
+  id: Float!
+  description: String!
+}
+
+type PdpContext {
+  id: String!
+  duration: String!
+  teid_data_plane: Float!
+  teid_control_plane: Float!
+  gtp_version: Float!
+  nsapi: Float!
+  sgsn_control_plane_ip_address: String!
+  sgsn_data_plane_ip_address: String!
+  ggsn_control_plane_ip_address: String!
+  ggsn_data_plane_ip_address: String!
+  created: DateTime!
+  mcc: String
+  mnc: String
+  lac: Float
+  ci: Float
+  sac: Float
+  rac: Float
+  ue_ip_address: String!
+  imeisv: String
+  region: String
+  breakout_ip: String
+  rat_type: RatType
+}
+
+type Connectivity {
+  status: String!
+  location: Location
+  pdp_context: PdpContext
+  services: [String!]
+}
+
+type EndpointDailyEntry {
+  date: String!
+  data_volume: Volume!
+  sms_volume: Volume!
+}
+
+type EndpointDaily {
+  id: Float!
+  days: [EndpointDailyEntry!]!
+}
+
+type Volume {
+  total: Float!
+  rx: Float!
+  tx: Float!
+}
+
+type MonthDataObject {
+  month: DateTime!
+  data_volume: Volume!
+  sms_volume: Volume!
+}
+
+type MeasurementPoint {
+  time: DateTime!
+  data_volume: Volume!
+  sms_volume: Volume!
+}
+
+type Stats {
+  id: Float!
+  month: [MonthDataObject!]
+  last_hour: [MeasurementPoint!]
+  current_month: MonthDataObject
+}
+
+type Currency {
+  id: Int!
+  code: String!
+  symbol: String
+}
+
+type OrganisationType {
+  id: Int!
+  description: String!
+}
+
+type OrganisationClass {
+  id: Int!
+  description: String!
+}
+
+type OrganisationStatus {
+  id: Int!
+  description: String!
+}
+
+type VerificationType {
+  id: Int!
+  description: String!
+}
+
+type OrganisationRelationType {
+  id: Int!
+  description: String!
+}
+
+type OrganisationRelation {
+  id: Int!
+  type: OrganisationRelationType!
+}
+
+type Organisation {
+  id: Int!
+  name: String!
+  type: OrganisationType!
+  created: DateTime!
+  currency: Currency
+  monthly_cost_limit: Float
+  country: Country
+  class: OrganisationClass!
+  status: OrganisationStatus!
+  relations: [OrganisationRelation!]
+  ext_reference: String
+  verification: String
+  verification_type: VerificationType
+  active_tariff_plan: OrganisationTariffPlanAssignmentObject
+  endpoints_stats_status: StatsStatus
+}
+
+type UserStatus {
+  id: Int!
+  description: String!
+}
+
+type RoleObject {
+  id: Int!
+  name: String!
+}
+
+type User {
+  id: Int!
+  organisation_id: Float!
+  organisation: Organisation!
+  created: DateTime!
+  username: String!
+  name: String
+  last_password_update: DateTime!
+  status: UserStatus!
+  last_activation_request: DateTime!
+  deleted: DateTime
+  verified: Boolean!
+  roles: [RoleObject!]!
+}
+
+type ServiceLevelObject {
+  id: Int!
+  name: String!
+}
+
+type TariffPlanScalePriceObject {
+  id: Int!
+  tariff_plan_id: Float!
+  scale_start: Float!
+  hosting_fee: Float!
+}
+
+type TariffPlanObject {
+  id: Int!
+  name: String!
+  description: String
+  creation_date: DateTime
+  activation_date: DateTime
+  deprecation_date: DateTime
+  expiry_time: Float!
+  service_level: ServiceLevelObject
+  federation_allowed: Boolean!
+  evaluation: Boolean!
+  vpn_access: Boolean!
+  api_access_allowed: Boolean!
+  currency: Currency
+  display_upgrade_plan: Boolean!
+  rate: Float!
+  yearly_rate: Float!
+  scale_prices: [TariffPlanScalePriceObject!]
+}
+
+type TariffPlanRuntimeObject {
+  id: Int!
+  number_of_units: Float!
+  time_unit_id: Float!
+}
+
+type OrganisationTariffPlanAssignmentObject {
+  id: Int!
+  tariff_plan_id: Float
+  tariff_plan: TariffPlanObject!
+  start_date: DateTime!
+  expiry_date: DateTime
+  tariff_plan_runtime_id: Float!
+  tariff_plan_runtime: TariffPlanRuntimeObject!
+  currency: Currency
+  service_level: ServiceLevelObject
+  federation_allowed: Boolean
+  sim_activated_rate: Float
+  active: Boolean!
+  sim_activated_amount: Int
+  applied_price: AppliedPrice
+  applied_rate: Float
+}
+
+type StatsStatus {
+  ENABLED: Float!
+  DISABLED: Float!
+  ONLINE: Float!
+}
+
+type AppliedPriceType {
+  rate: Float!
+  volume: Float!
+  scale_start: Float
+  price_model: String!
+}
+
+type AppliedPrice {
+  sim_activated_rate: AppliedPriceType!
+}
+
+type Query {
+  endpoints(
+    sort: String = ""
+    filter: String = ""
+    page: Int = 1
+    per_page: Int = 25
+  ): EndpointPaging!
+  endpointsQuery(
+    page: Int = 1
+    per_page: Int = 25
+
+    # Specify to filter the records returned.
+    filter: EndpointQueryObjectFilter = {}
+
+    # Specify to sort results.
+    sorting: [EndpointQueryObjectSort!] = []
+  ): EndpointPaging!
+  endpoint(id: Int!): Endpoint!
+  myUser: User!
+}
+
+input EndpointQueryObjectFilter {
+  and: [EndpointQueryObjectFilter!]
+  or: [EndpointQueryObjectFilter!]
+  id: EndpointQueryObjectIdFilterComparison
+  name: EndpointQueryObjectNameFilterComparison
+  tags: EndpointQueryObjectTagsFilterComparison
+  ip_address: EndpointQueryObjectIp_addressFilterComparison
+  created: EndpointQueryObjectCreatedFilterComparison
+  last_updated: EndpointQueryObjectLast_updatedFilterComparison
+  iccid: EndpointQueryObjectIccidFilterComparison
+  sim_status: EndpointQueryObjectSim_statusFilterComparison
+  status: EndpointQueryObjectStatusFilterComparison
+  imei: EndpointQueryObjectImeiFilterComparison
+  service_profile: EndpointQueryObjectService_profileFilterComparison
+  tariff_profile: EndpointQueryObjectTariff_profileFilterComparison
+}
+
+input EndpointQueryObjectIdFilterComparison {
+  eq: Int
+  neq: Int
+  in: [Int!]
+  notIn: [Int!]
+}
+
+input EndpointQueryObjectNameFilterComparison {
+  eq: String
+  like: String
+  notLike: String
+}
+
+input EndpointQueryObjectTagsFilterComparison {
+  eq: String
+  like: String
+  notLike: String
+}
+
+input EndpointQueryObjectIp_addressFilterComparison {
+  eq: String
+  like: String
+  notLike: String
+}
+
+input EndpointQueryObjectCreatedFilterComparison {
+  eq: DateTime
+  like: DateTime
+}
+
+input EndpointQueryObjectLast_updatedFilterComparison {
+  eq: DateTime
+  like: DateTime
+}
+
+input EndpointQueryObjectIccidFilterComparison {
+  eq: String
+  like: String
+  in: [String!]
+}
+
+input EndpointQueryObjectSim_statusFilterComparison {
+  eq: Int
+  neq: Int
+  in: [Int!]
+  notIn: [Int!]
+}
+
+input EndpointQueryObjectStatusFilterComparison {
+  eq: Int
+  neq: Int
+  in: [Int!]
+  notIn: [Int!]
+}
+
+input EndpointQueryObjectImeiFilterComparison {
+  eq: String
+  like: String
+  notLike: String
+}
+
+input EndpointQueryObjectService_profileFilterComparison {
+  eq: Int
+  neq: Int
+  in: [Int!]
+  notIn: [Int!]
+}
+
+input EndpointQueryObjectTariff_profileFilterComparison {
+  eq: Int
+  neq: Int
+  in: [Int!]
+  notIn: [Int!]
+}
+
+input EndpointQueryObjectSort {
+  field: EndpointQueryObjectSortFields!
+  direction: SortDirection!
+  nulls: SortNulls
+}
+
+enum EndpointQueryObjectSortFields {
+  id
+  name
+  tags
+  ip_address
+  created
+  last_updated
+  iccid
+  sim_status
+  status
+  imei
+  service_profile
+  tariff_profile
+}
+
+# Sort Directions
+enum SortDirection {
+  ASC
+  DESC
+}
+
+# Sort Nulls Options
+enum SortNulls {
+  NULLS_FIRST
+  NULLS_LAST
+}

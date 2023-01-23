@@ -192,8 +192,9 @@ const sidebars = {
         },
       ],
     },
-    "glossary",
+    'glossary',
   ],
+  ...require("./docs/graphql/sidebar-schema.js")
 };
 
 module.exports = sidebars;

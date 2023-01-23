@@ -1,0 +1,70 @@
+---
+id: country
+title: Country
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type Country {
+  id: Float!
+  name: String!
+  country_code: String!
+  iso_code: String!
+  mcc: String!
+  latitude: String
+  longitude: String
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Country.<b>id</b></code>](#)<Bullet />[`Float!`](/graphql/graphql/scalars/float) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Country.<b>name</b></code>](#)<Bullet />[`String!`](/graphql/graphql/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Country.<b>country_code</b></code>](#)<Bullet />[`String!`](/graphql/graphql/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Country.<b>iso_code</b></code>](#)<Bullet />[`String!`](/graphql/graphql/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Country.<b>mcc</b></code>](#)<Bullet />[`String!`](/graphql/graphql/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Country.<b>latitude</b></code>](#)<Bullet />[`String`](/graphql/graphql/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Country.<b>longitude</b></code>](#)<Bullet />[`String`](/graphql/graphql/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+
+
+### Member of
+
+[`Location`](/graphql/graphql/objects/location)  <Badge class="secondary" text="object"/><Bullet />[`Organisation`](/graphql/graphql/objects/organisation)  <Badge class="secondary" text="object"/>
+
+
+

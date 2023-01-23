@@ -1,0 +1,32 @@
+---
+id: string
+title: String
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.
+
+```graphql
+scalar String
+```
+
+
+
+
+### Member of
+
+[`AppliedPriceType`](/graphql/graphql/objects/applied-price-type)  <Badge class="secondary" text="object"/><Bullet />[`Connectivity`](/graphql/graphql/objects/connectivity)  <Badge class="secondary" text="object"/><Bullet />[`Country`](/graphql/graphql/objects/country)  <Badge class="secondary" text="object"/><Bullet />[`Currency`](/graphql/graphql/objects/currency)  <Badge class="secondary" text="object"/><Bullet />[`deprecated`](/graphql/graphql/directives/deprecated)  <Badge class="secondary" text="directive"/><Bullet />[`Endpoint`](/graphql/graphql/objects/endpoint)  <Badge class="secondary" text="object"/><Bullet />[`EndpointDailyEntry`](/graphql/graphql/objects/endpoint-daily-entry)  <Badge class="secondary" text="object"/><Bullet />[`EndpointQueryObjectIccidFilterComparison`](/graphql/graphql/inputs/endpoint-query-object-iccid-filter-comparison)  <Badge class="secondary" text="input"/><Bullet />[`EndpointQueryObjectImeiFilterComparison`](/graphql/graphql/inputs/endpoint-query-object-imei-filter-comparison)  <Badge class="secondary" text="input"/><Bullet />[`EndpointQueryObjectIp_addressFilterComparison`](/graphql/graphql/inputs/endpoint-query-object-ip-address-filter-comparison)  <Badge class="secondary" text="input"/><Bullet />[`EndpointQueryObjectNameFilterComparison`](/graphql/graphql/inputs/endpoint-query-object-name-filter-comparison)  <Badge class="secondary" text="input"/><Bullet />[`EndpointQueryObjectTagsFilterComparison`](/graphql/graphql/inputs/endpoint-query-object-tags-filter-comparison)  <Badge class="secondary" text="input"/><Bullet />[`endpoints`](/graphql/graphql/queries/endpoints)  <Badge class="secondary" text="query"/><Bullet />[`EndpointStatus`](/graphql/graphql/objects/endpoint-status)  <Badge class="secondary" text="object"/><Bullet />[`Location`](/graphql/graphql/objects/location)  <Badge class="secondary" text="object"/><Bullet />[`LocationOperator`](/graphql/graphql/objects/location-operator)  <Badge class="secondary" text="object"/><Bullet />[`Organisation`](/graphql/graphql/objects/organisation)  <Badge class="secondary" text="object"/><Bullet />[`OrganisationClass`](/graphql/graphql/objects/organisation-class)  <Badge class="secondary" text="object"/><Bullet />[`OrganisationRelationType`](/graphql/graphql/objects/organisation-relation-type)  <Badge class="secondary" text="object"/><Bullet />[`OrganisationStatus`](/graphql/graphql/objects/organisation-status)  <Badge class="secondary" text="object"/><Bullet />[`OrganisationType`](/graphql/graphql/objects/organisation-type)  <Badge class="secondary" text="object"/><Bullet />[`PdpContext`](/graphql/graphql/objects/pdp-context)  <Badge class="secondary" text="object"/><Bullet />[`RatType`](/graphql/graphql/objects/rat-type)  <Badge class="secondary" text="object"/><Bullet />[`RoleObject`](/graphql/graphql/objects/role-object)  <Badge class="secondary" text="object"/><Bullet />[`ServiceLevelObject`](/graphql/graphql/objects/service-level-object)  <Badge class="secondary" text="object"/><Bullet />[`ServiceProfile`](/graphql/graphql/objects/service-profile)  <Badge class="secondary" text="object"/><Bullet />[`Sim`](/graphql/graphql/objects/sim)  <Badge class="secondary" text="object"/><Bullet />[`SimStatus`](/graphql/graphql/objects/sim-status)  <Badge class="secondary" text="object"/><Bullet />[`specifiedBy`](/graphql/graphql/directives/specified-by)  <Badge class="secondary" text="directive"/><Bullet />[`TariffPlanObject`](/graphql/graphql/objects/tariff-plan-object)  <Badge class="secondary" text="object"/><Bullet />[`TariffProfile`](/graphql/graphql/objects/tariff-profile)  <Badge class="secondary" text="object"/><Bullet />[`User`](/graphql/graphql/objects/user)  <Badge class="secondary" text="object"/><Bullet />[`UserStatus`](/graphql/graphql/objects/user-status)  <Badge class="secondary" text="object"/><Bullet />[`VerificationType`](/graphql/graphql/objects/verification-type)  <Badge class="secondary" text="object"/>
+
+
+

@@ -1,0 +1,55 @@
+---
+id: stats
+title: Stats
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type Stats {
+  id: Float!
+  month: [MonthDataObject!]
+  last_hour: [MeasurementPoint!]
+  current_month: MonthDataObject
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Stats.<b>id</b></code>](#)<Bullet />[`Float!`](/graphql/graphql/scalars/float) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Stats.<b>month</b></code>](#)<Bullet />[`[MonthDataObject!]`](/graphql/graphql/objects/month-data-object) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Stats.<b>last_hour</b></code>](#)<Bullet />[`[MeasurementPoint!]`](/graphql/graphql/objects/measurement-point) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Stats.<b>current_month</b></code>](#)<Bullet />[`MonthDataObject`](/graphql/graphql/objects/month-data-object) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+### Member of
+
+[`Endpoint`](/graphql/graphql/objects/endpoint)  <Badge class="secondary" text="object"/>
+
+
+

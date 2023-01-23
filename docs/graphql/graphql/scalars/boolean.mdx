@@ -1,0 +1,32 @@
+---
+id: boolean
+title: Boolean
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+The `Boolean` scalar type represents `true` or `false`.
+
+```graphql
+scalar Boolean
+```
+
+
+
+
+### Member of
+
+[`Endpoint`](/graphql/graphql/objects/endpoint)  <Badge class="secondary" text="object"/><Bullet />[`include`](/graphql/graphql/directives/include)  <Badge class="secondary" text="directive"/><Bullet />[`OrganisationTariffPlanAssignmentObject`](/graphql/graphql/objects/organisation-tariff-plan-assignment-object)  <Badge class="secondary" text="object"/><Bullet />[`skip`](/graphql/graphql/directives/skip)  <Badge class="secondary" text="directive"/><Bullet />[`TariffPlanObject`](/graphql/graphql/objects/tariff-plan-object)  <Badge class="secondary" text="object"/><Bullet />[`User`](/graphql/graphql/objects/user)  <Badge class="secondary" text="object"/>
+
+
+

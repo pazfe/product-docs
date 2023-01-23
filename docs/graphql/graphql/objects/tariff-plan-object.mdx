@@ -1,0 +1,120 @@
+---
+id: tariff-plan-object
+title: TariffPlanObject
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type TariffPlanObject {
+  id: Int!
+  name: String!
+  description: String
+  creation_date: DateTime
+  activation_date: DateTime
+  deprecation_date: DateTime
+  expiry_time: Float!
+  service_level: ServiceLevelObject
+  federation_allowed: Boolean!
+  evaluation: Boolean!
+  vpn_access: Boolean!
+  api_access_allowed: Boolean!
+  currency: Currency
+  display_upgrade_plan: Boolean!
+  rate: Float!
+  yearly_rate: Float!
+  scale_prices: [TariffPlanScalePriceObject!]
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanObject.<b>id</b></code>](#)<Bullet />[`Int!`](/graphql/graphql/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanObject.<b>name</b></code>](#)<Bullet />[`String!`](/graphql/graphql/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanObject.<b>description</b></code>](#)<Bullet />[`String`](/graphql/graphql/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanObject.<b>creation_date</b></code>](#)<Bullet />[`DateTime`](/graphql/graphql/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanObject.<b>activation_date</b></code>](#)<Bullet />[`DateTime`](/graphql/graphql/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanObject.<b>deprecation_date</b></code>](#)<Bullet />[`DateTime`](/graphql/graphql/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanObject.<b>expiry_time</b></code>](#)<Bullet />[`Float!`](/graphql/graphql/scalars/float) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanObject.<b>service_level</b></code>](#)<Bullet />[`ServiceLevelObject`](/graphql/graphql/objects/service-level-object) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanObject.<b>federation_allowed</b></code>](#)<Bullet />[`Boolean!`](/graphql/graphql/scalars/boolean) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanObject.<b>evaluation</b></code>](#)<Bullet />[`Boolean!`](/graphql/graphql/scalars/boolean) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanObject.<b>vpn_access</b></code>](#)<Bullet />[`Boolean!`](/graphql/graphql/scalars/boolean) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanObject.<b>api_access_allowed</b></code>](#)<Bullet />[`Boolean!`](/graphql/graphql/scalars/boolean) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanObject.<b>currency</b></code>](#)<Bullet />[`Currency`](/graphql/graphql/objects/currency) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanObject.<b>display_upgrade_plan</b></code>](#)<Bullet />[`Boolean!`](/graphql/graphql/scalars/boolean) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanObject.<b>rate</b></code>](#)<Bullet />[`Float!`](/graphql/graphql/scalars/float) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanObject.<b>yearly_rate</b></code>](#)<Bullet />[`Float!`](/graphql/graphql/scalars/float) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanObject.<b>scale_prices</b></code>](#)<Bullet />[`[TariffPlanScalePriceObject!]`](/graphql/graphql/objects/tariff-plan-scale-price-object) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+### Member of
+
+[`OrganisationTariffPlanAssignmentObject`](/graphql/graphql/objects/organisation-tariff-plan-assignment-object)  <Badge class="secondary" text="object"/>
+
+
+

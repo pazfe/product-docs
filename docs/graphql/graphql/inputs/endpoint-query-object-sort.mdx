@@ -1,0 +1,50 @@
+---
+id: endpoint-query-object-sort
+title: EndpointQueryObjectSort
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+input EndpointQueryObjectSort {
+  field: EndpointQueryObjectSortFields!
+  direction: SortDirection!
+  nulls: SortNulls
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>EndpointQueryObjectSort.<b>field</b></code>](#)<Bullet />[`EndpointQueryObjectSortFields!`](/graphql/graphql/enums/endpoint-query-object-sort-fields) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EndpointQueryObjectSort.<b>direction</b></code>](#)<Bullet />[`SortDirection!`](/graphql/graphql/enums/sort-direction) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EndpointQueryObjectSort.<b>nulls</b></code>](#)<Bullet />[`SortNulls`](/graphql/graphql/enums/sort-nulls) <Badge class="secondary" text="enum"/>
+> 
+> 
+
+
+
+### Member of
+
+[`endpointsQuery`](/graphql/graphql/queries/endpoints-query)  <Badge class="secondary" text="query"/>
+
+
+
