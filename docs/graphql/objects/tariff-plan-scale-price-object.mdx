@@ -1,0 +1,55 @@
+---
+id: tariff-plan-scale-price-object
+title: TariffPlanScalePriceObject
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type TariffPlanScalePriceObject {
+  id: Int!
+  tariff_plan_id: Float!
+  scale_start: Float!
+  hosting_fee: Float!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanScalePriceObject.<b>id</b></code>](#)<Bullet />[`Int!`](/graphql/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanScalePriceObject.<b>tariff_plan_id</b></code>](#)<Bullet />[`Float!`](/graphql/scalars/float) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanScalePriceObject.<b>scale_start</b></code>](#)<Bullet />[`Float!`](/graphql/scalars/float) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TariffPlanScalePriceObject.<b>hosting_fee</b></code>](#)<Bullet />[`Float!`](/graphql/scalars/float) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+
+
+### Member of
+
+[`TariffPlanObject`](/graphql/objects/tariff-plan-object)  <Badge class="secondary" text="object"/>
+
+
+

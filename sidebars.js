@@ -1,4 +1,11 @@
-// @ts-check
+// @ts-ignore
+let api = [];
+try {
+  apiSidebar = require("./docs/graphql/sidebar-schema.js");
+} catch (err) {
+  console.warn(`Warning: Missing sidebar file "./docs/graphql/sidebar-schema.js"`);
+}
+
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   mainDocsSidebar: [
@@ -194,7 +201,7 @@ const sidebars = {
     },
     'glossary',
   ],
-  ...require("./docs/graphql/sidebar-schema.js")
+  ...apiSidebar,
 };
 
 module.exports = sidebars;

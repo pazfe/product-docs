@@ -1,0 +1,32 @@
+---
+id: float
+title: Float
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+The `Float` scalar type represents signed double-precision fractional values as specified by [IEEE 754](https://en.wikipedia.org/wiki/IEEE_floating_point).
+
+```graphql
+scalar Float
+```
+
+
+
+
+### Member of
+
+[`AppliedPriceType`](/graphql/objects/applied-price-type)  <Badge class="secondary" text="object"/><Bullet />[`Country`](/graphql/objects/country)  <Badge class="secondary" text="object"/><Bullet />[`Endpoint`](/graphql/objects/endpoint)  <Badge class="secondary" text="object"/><Bullet />[`EndpointDaily`](/graphql/objects/endpoint-daily)  <Badge class="secondary" text="object"/><Bullet />[`LocationOperator`](/graphql/objects/location-operator)  <Badge class="secondary" text="object"/><Bullet />[`Organisation`](/graphql/objects/organisation)  <Badge class="secondary" text="object"/><Bullet />[`OrganisationTariffPlanAssignmentObject`](/graphql/objects/organisation-tariff-plan-assignment-object)  <Badge class="secondary" text="object"/><Bullet />[`PdpContext`](/graphql/objects/pdp-context)  <Badge class="secondary" text="object"/><Bullet />[`RatType`](/graphql/objects/rat-type)  <Badge class="secondary" text="object"/><Bullet />[`ServiceProfile`](/graphql/objects/service-profile)  <Badge class="secondary" text="object"/><Bullet />[`Sim`](/graphql/objects/sim)  <Badge class="secondary" text="object"/><Bullet />[`Stats`](/graphql/objects/stats)  <Badge class="secondary" text="object"/><Bullet />[`StatsStatus`](/graphql/objects/stats-status)  <Badge class="secondary" text="object"/><Bullet />[`TariffPlanObject`](/graphql/objects/tariff-plan-object)  <Badge class="secondary" text="object"/><Bullet />[`TariffPlanRuntimeObject`](/graphql/objects/tariff-plan-runtime-object)  <Badge class="secondary" text="object"/><Bullet />[`TariffPlanScalePriceObject`](/graphql/objects/tariff-plan-scale-price-object)  <Badge class="secondary" text="object"/><Bullet />[`TariffProfile`](/graphql/objects/tariff-profile)  <Badge class="secondary" text="object"/><Bullet />[`User`](/graphql/objects/user)  <Badge class="secondary" text="object"/><Bullet />[`Volume`](/graphql/objects/volume)  <Badge class="secondary" text="object"/>
+
+
+

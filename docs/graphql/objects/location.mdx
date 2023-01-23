@@ -1,0 +1,85 @@
+---
+id: location
+title: Location
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type Location {
+  iccid: String!
+  imsi: String!
+  last_updated: DateTime
+  last_updated_gprs: DateTime
+  sgsn_number: String
+  vlr_number: String
+  msc: String
+  sgsn_ip_address: String
+  country: Country
+  operator: LocationOperator
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Location.<b>iccid</b></code>](#)<Bullet />[`String!`](/graphql/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Location.<b>imsi</b></code>](#)<Bullet />[`String!`](/graphql/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Location.<b>last_updated</b></code>](#)<Bullet />[`DateTime`](/graphql/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Location.<b>last_updated_gprs</b></code>](#)<Bullet />[`DateTime`](/graphql/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Location.<b>sgsn_number</b></code>](#)<Bullet />[`String`](/graphql/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Location.<b>vlr_number</b></code>](#)<Bullet />[`String`](/graphql/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Location.<b>msc</b></code>](#)<Bullet />[`String`](/graphql/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Location.<b>sgsn_ip_address</b></code>](#)<Bullet />[`String`](/graphql/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Location.<b>country</b></code>](#)<Bullet />[`Country`](/graphql/objects/country) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Location.<b>operator</b></code>](#)<Bullet />[`LocationOperator`](/graphql/objects/location-operator) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+### Member of
+
+[`Connectivity`](/graphql/objects/connectivity)  <Badge class="secondary" text="object"/>
+
+
+

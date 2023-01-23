@@ -1,0 +1,142 @@
+---
+id: endpoint
+title: Endpoint
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type Endpoint {
+  id: Float!
+  name: String!
+  organisation_id: Float!
+  ip_address: String
+  created: DateTime!
+  last_updated: DateTime!
+  ip_address_space: Float
+  status: EndpointStatus!
+  tags: String
+  imei: String
+  imei_lock: Boolean
+  sims: [Sim!]
+  service_profile: ServiceProfile!
+  tariff_profile: TariffProfile!
+  connectivity: Connectivity
+  stats(
+  skipLastHour: Boolean = true
+): Stats
+  stats_daily(
+  start: DateTime
+  end: DateTime
+): EndpointDaily
+  sim: Sim
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Endpoint.<b>id</b></code>](#)<Bullet />[`Float!`](/graphql/scalars/float) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Endpoint.<b>name</b></code>](#)<Bullet />[`String!`](/graphql/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Endpoint.<b>organisation_id</b></code>](#)<Bullet />[`Float!`](/graphql/scalars/float) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Endpoint.<b>ip_address</b></code>](#)<Bullet />[`String`](/graphql/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Endpoint.<b>created</b></code>](#)<Bullet />[`DateTime!`](/graphql/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Endpoint.<b>last_updated</b></code>](#)<Bullet />[`DateTime!`](/graphql/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Endpoint.<b>ip_address_space</b></code>](#)<Bullet />[`Float`](/graphql/scalars/float) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Endpoint.<b>status</b></code>](#)<Bullet />[`EndpointStatus!`](/graphql/objects/endpoint-status) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Endpoint.<b>tags</b></code>](#)<Bullet />[`String`](/graphql/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Endpoint.<b>imei</b></code>](#)<Bullet />[`String`](/graphql/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Endpoint.<b>imei_lock</b></code>](#)<Bullet />[`Boolean`](/graphql/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Endpoint.<b>sims</b></code>](#)<Bullet />[`[Sim!]`](/graphql/objects/sim) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Endpoint.<b>service_profile</b></code>](#)<Bullet />[`ServiceProfile!`](/graphql/objects/service-profile) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Endpoint.<b>tariff_profile</b></code>](#)<Bullet />[`TariffProfile!`](/graphql/objects/tariff-profile) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Endpoint.<b>connectivity</b></code>](#)<Bullet />[`Connectivity`](/graphql/objects/connectivity) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Endpoint.<b>stats</b></code>](#)<Bullet />[`Stats`](/graphql/objects/stats) <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>Endpoint.stats.<b>skipLastHour</b></code>](#)<Bullet />[`Boolean`](/graphql/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Endpoint.<b>stats_daily</b></code>](#)<Bullet />[`EndpointDaily`](/graphql/objects/endpoint-daily) <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>Endpoint.stats_daily.<b>start</b></code>](#)<Bullet />[`DateTime`](/graphql/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Endpoint.stats_daily.<b>end</b></code>](#)<Bullet />[`DateTime`](/graphql/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Endpoint.<b>sim</b></code>](#)<Bullet />[`Sim`](/graphql/objects/sim) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+### Returned by
+
+[`endpoint`](/graphql/queries/endpoint)  <Badge class="secondary" text="query"/>
+
+### Member of
+
+[`EndpointPaging`](/graphql/objects/endpoint-paging)  <Badge class="secondary" text="object"/>
+
+
+

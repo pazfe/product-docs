@@ -69,9 +69,10 @@ const config = {
       "@graphql-markdown/docusaurus",
       {
         schema: "./graphql/schema.graphql",
-        rootPath: "./docs/graphql", // docs will be generated under './docs/graphql' (rootPath/baseURL)
-        baseURL: "/graphql/",
-        linkRoot: "/graphql/",
+        rootPath: "./docs", // docs will be generated under './docs' (rootPath/baseURL)
+        baseURL: "graphql",
+        linkRoot: "/",
+        homepage: "static/graphql-index.md",
         docOptions: {
           index: true,
         },

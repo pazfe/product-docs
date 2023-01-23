@@ -1,0 +1,105 @@
+---
+id: endpoint-query-object-filter
+title: EndpointQueryObjectFilter
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+input EndpointQueryObjectFilter {
+  and: [EndpointQueryObjectFilter!]
+  or: [EndpointQueryObjectFilter!]
+  id: EndpointQueryObjectIdFilterComparison
+  name: EndpointQueryObjectNameFilterComparison
+  tags: EndpointQueryObjectTagsFilterComparison
+  ip_address: EndpointQueryObjectIp_addressFilterComparison
+  created: EndpointQueryObjectCreatedFilterComparison
+  last_updated: EndpointQueryObjectLast_updatedFilterComparison
+  iccid: EndpointQueryObjectIccidFilterComparison
+  sim_status: EndpointQueryObjectSim_statusFilterComparison
+  status: EndpointQueryObjectStatusFilterComparison
+  imei: EndpointQueryObjectImeiFilterComparison
+  service_profile: EndpointQueryObjectService_profileFilterComparison
+  tariff_profile: EndpointQueryObjectTariff_profileFilterComparison
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>EndpointQueryObjectFilter.<b>and</b></code>](#)<Bullet />[`[EndpointQueryObjectFilter!]`](/graphql/inputs/endpoint-query-object-filter) <Badge class="secondary" text="list"/> <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EndpointQueryObjectFilter.<b>or</b></code>](#)<Bullet />[`[EndpointQueryObjectFilter!]`](/graphql/inputs/endpoint-query-object-filter) <Badge class="secondary" text="list"/> <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EndpointQueryObjectFilter.<b>id</b></code>](#)<Bullet />[`EndpointQueryObjectIdFilterComparison`](/graphql/inputs/endpoint-query-object-id-filter-comparison) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EndpointQueryObjectFilter.<b>name</b></code>](#)<Bullet />[`EndpointQueryObjectNameFilterComparison`](/graphql/inputs/endpoint-query-object-name-filter-comparison) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EndpointQueryObjectFilter.<b>tags</b></code>](#)<Bullet />[`EndpointQueryObjectTagsFilterComparison`](/graphql/inputs/endpoint-query-object-tags-filter-comparison) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EndpointQueryObjectFilter.<b>ip_address</b></code>](#)<Bullet />[`EndpointQueryObjectIp_addressFilterComparison`](/graphql/inputs/endpoint-query-object-ip-address-filter-comparison) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EndpointQueryObjectFilter.<b>created</b></code>](#)<Bullet />[`EndpointQueryObjectCreatedFilterComparison`](/graphql/inputs/endpoint-query-object-created-filter-comparison) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EndpointQueryObjectFilter.<b>last_updated</b></code>](#)<Bullet />[`EndpointQueryObjectLast_updatedFilterComparison`](/graphql/inputs/endpoint-query-object-last-updated-filter-comparison) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EndpointQueryObjectFilter.<b>iccid</b></code>](#)<Bullet />[`EndpointQueryObjectIccidFilterComparison`](/graphql/inputs/endpoint-query-object-iccid-filter-comparison) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EndpointQueryObjectFilter.<b>sim_status</b></code>](#)<Bullet />[`EndpointQueryObjectSim_statusFilterComparison`](/graphql/inputs/endpoint-query-object-sim-status-filter-comparison) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EndpointQueryObjectFilter.<b>status</b></code>](#)<Bullet />[`EndpointQueryObjectStatusFilterComparison`](/graphql/inputs/endpoint-query-object-status-filter-comparison) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EndpointQueryObjectFilter.<b>imei</b></code>](#)<Bullet />[`EndpointQueryObjectImeiFilterComparison`](/graphql/inputs/endpoint-query-object-imei-filter-comparison) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EndpointQueryObjectFilter.<b>service_profile</b></code>](#)<Bullet />[`EndpointQueryObjectService_profileFilterComparison`](/graphql/inputs/endpoint-query-object-service-profile-filter-comparison) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EndpointQueryObjectFilter.<b>tariff_profile</b></code>](#)<Bullet />[`EndpointQueryObjectTariff_profileFilterComparison`](/graphql/inputs/endpoint-query-object-tariff-profile-filter-comparison) <Badge class="secondary" text="input"/>
+> 
+> 
+
+
+
+### Member of
+
+[`EndpointQueryObjectFilter`](/graphql/inputs/endpoint-query-object-filter)  <Badge class="secondary" text="input"/><Bullet />[`endpointsQuery`](/graphql/queries/endpoints-query)  <Badge class="secondary" text="query"/>
+
+
+
