@@ -1,10 +1,23 @@
-# Dependencies
-node_modules
+# Asset directories
+static
+
+# Markdown (handled by another linter)
+docs
+*.md
+
+# Ignore files
+.gitignore
+.prettierignore
+
+# Lock file
+yarn.lock
 
 # Production
 build
 
 # Generated files
+.github/ISSUE_TEMPLATE
+.husky
 .docusaurus
 .cache-loader
 
