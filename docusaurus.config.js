@@ -59,9 +59,9 @@ const config = {
       defer: true,
     },
     {
-      type: 'text/javascript',
-      src: '/scripts/heapAnalytics.js',
-    }
+      type: "text/javascript",
+      src: "/scripts/heapAnalytics.js",
+    },
   ],
 
   plugins: [
@@ -77,7 +77,7 @@ const config = {
           index: true,
         },
         loaders: {
-          GraphQLFileLoader: "@graphql-tools/graphql-file-loader" // local file schema
+          GraphQLFileLoader: "@graphql-tools/graphql-file-loader", // local file schema
         },
       },
     ],
@@ -121,6 +121,18 @@ const config = {
           alt: "emnify Documentation – Home",
           src: "img/logo-word-blue-295x80.png",
         },
+        items: [
+          {
+            href: "https://cdn.emnify.net/api/doc/index.html",
+            label: "REST API",
+            position: "right",
+          },
+          {
+            to: "/product-docs/graphql",
+            label: "GraphQL API",
+            position: "right",
+          },
+        ],
       },
       docs: {
         sidebar: {
