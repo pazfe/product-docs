@@ -1,6 +1,5 @@
 ---
 description: List of all available event types
-toc_max_heading_level: 2
 ---
 
 # Event types
